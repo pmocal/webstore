@@ -1,0 +1,159 @@
+html {
+  background: url(http://visionarism.com/images/IMG_2764.jpg);
+  font-family: 'Karla', sans-serif;
+  font-size: 18px;
+  height: 92%;
+}
+
+body {
+  height: 93%;
+}
+
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+#content li {
+  margin: 15px;
+  width: 50%;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li p {
+  padding: 0px 5px;
+}
+
+.navbar li a {
+  font-size: 22px;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #ECD8D4;
+}
+
+.navbar .login {
+  float: right;
+  color: black;
+}
+
+a:link {
+  color: green;
+}
+
+img {
+  border: solid;
+  border-width: 1px;
+}
+
+#logo {
+  font-family: 'Shrikhand', cursive;
+  text-shadow: #FC0 1px 0 10px;
+  margin: 14px 0 14px 20px;
+  font-size: 40px;
+}
+
+#container {
+  width: 75%;
+  margin: 10px auto;
+  background: #fff;
+  padding: 15px 30px;
+  border: solid 1px black;
+  min-height: 93%;
+}
+
+#content {
+  padding: 20px 20px;
+  display: inline-block;
+  width: 100%;
+}
+
+h1 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.field {
+  margin: 15px;
+  text-align: center;
+}
+
+.actions {
+  margin: 15px;
+  text-align: center;
+}
+
+label {
+  margin-right: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+#loginbox {
+  margin: 15px;
+  text-align: center;
+  font-size: 20px
+}
+
+.comment {
+  border-style: groove;
+  padding: 10px;
+  margin: 10px;
+}
+
+#articles {
+  display: flex;
+  list-style-type: none;
+  padding: 0px;
+  margin-bottom: 0px;
+  flex-wrap: wrap;
+}
+
+#articles li {
+  justify-content: space-between;
+  width: auto;
+}
+
+#tags a[data-method="delete"] { 
+    font-size: 10px;
+}
+
+#tags {
+  list-style-type: circle;
+  padding-inline-start: 0px;
+  display: inline-block;
+}
+
+#tags li {
+  width: auto;
+  float: left;
+}
+
+#backbutton {
+  bottom: 50px;
+  position: absolute;
+  font-size: 22px;
+}
+
+input {
+  font-size: 22px;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  text-align: left;
+}

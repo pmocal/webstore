@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blogger</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Karla|Shrikhand" rel="stylesheet">
+  </head>
+
+  <body>
+    <p class="flash"><%= flash.notice %></p>
+    <p id="logo">Parthiv's Garment Webstore</p>
+    <div id="container">
+      <ul class="navbar">
+        <li><a href="/articles">Home</a></li>
+        <li><a href="/articles">Articles</a></li>
+        <li><a href="/tags">Tags</a></li>
+        <li class="login">
+          <% if logged_in? %>
+            <%= link_to "(logout)", logout_path %>
+          <% else %>
+            <%= link_to "(login)", login_path %>
+          <% end %>
+        </li>
+        <li class="login">
+          <% if logged_in? %>
+            <p><%= "Logged in as #{current_user.email}" %></p>
+          <% end %>
+        </li>
+      </ul>
+      <hr>
+      <div id="content">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>
