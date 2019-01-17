@@ -1,15 +1,20 @@
-<h1>Recent Posts</h1>
-
+<h1>All Articles</h1>
 <ul id="articles">
   <% @articles.each do |article| %>
-    <li>
-      <%= link_to article.title, article_path(article) %>
-	<p>
-	  <% if article.image.exists? %>
-	      <%= image_tag article.image.url(:thumb) %><br/>
-	  <% end %>
-	</p>
-    </li>
+	<a href="<%= article_path(article) %>">
+		<li>
+			<div class="flex-container">
+				<div>
+					<p><%= article.title %></p>
+				</div>
+				<div>
+					<% if article.image.exists? %>
+					  <%= image_tag article.image.url(:thumb) %><br/>
+					<% end %>
+				</div>
+			</div>
+		</li>
+	</a>
   <% end %>
 </ul>
 <% if logged_in? %>

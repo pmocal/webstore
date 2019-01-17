@@ -17,11 +17,6 @@ body {
   background-color: white;
 }
 
-#content li {
-  margin: 15px;
-  width: 50%;
-}
-
 .navbar li {
   float: left;
 }
@@ -38,8 +33,14 @@ body {
   text-decoration: none;
 }
 
-li a:hover {
-  background-color: #ECD8D4;
+@-webkit-keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+  
+  to {
+    -webkit-mask-position: -50%;
+  }
 }
 
 .navbar .login {
@@ -49,11 +50,6 @@ li a:hover {
 
 a:link {
   color: green;
-}
-
-img {
-  border: solid;
-  border-width: 1px;
 }
 
 #logo {
@@ -70,12 +66,6 @@ img {
   padding: 15px 30px;
   border: solid 1px black;
   min-height: 93%;
-}
-
-#content {
-  padding: 20px 20px;
-  display: inline-block;
-  width: 100%;
 }
 
 h1 {
@@ -106,12 +96,6 @@ label {
   font-size: 20px
 }
 
-.comment {
-  border-style: groove;
-  padding: 10px;
-  margin: 10px;
-}
-
 #articles {
   display: flex;
   list-style-type: none;
@@ -120,19 +104,29 @@ label {
   flex-wrap: wrap;
 }
 
-#articles li {
-  justify-content: space-between;
-  width: auto;
+#articles a {
+  width: 50%;
+}
+
+#content {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+#content a li {
+  margin: 15px;
+}
+
+.navbar a:hover {
+  background-color: #d2b48c;
+  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+  -webkit-mask-size: 200%;
+  animation: shine 2s infinite;
 }
 
 #tags a[data-method="delete"] { 
     font-size: 10px;
-}
-
-#tags {
-  list-style-type: circle;
-  padding-inline-start: 0px;
-  display: inline-block;
 }
 
 #tags li {
@@ -144,6 +138,7 @@ label {
   bottom: 100px;
   position: absolute;
   font-size: 22px;
+  margin: 0;
 }
 
 input {
@@ -154,6 +149,12 @@ table {
   width: 100%;
 }
 
-th {
-  text-align: left;
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#top * {
+  display: inline;
 }

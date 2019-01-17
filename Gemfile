@@ -5,6 +5,10 @@ ruby '2.5.1'
 
 gem 'sorcery'
 gem 'paperclip'
+gem "rack", ">= 2.0.6"
+gem "loofah", ">= 2.2.3"
+
+gem 'jquery-rails'
 
 gem 'bootstrap-sass', '3.3.7'
 

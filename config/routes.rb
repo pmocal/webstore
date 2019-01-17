@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
+	
 	root to: 'articles#index'
-	resources :articles do
-	  resources :comments
-	end
-	resources :tags
+	resources :articles
+	resources :tags, param: :name
 	resources :authors
-
 	resources :author_sessions, only: [ :new, :create, :destroy ]
 
 	get 'login'  => 'author_sessions#new'

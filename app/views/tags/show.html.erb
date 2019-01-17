@@ -1,14 +1,14 @@
-<h1>Articles Tagged with <%= @tag.name %></h1>
+<h1><%= @tag.name.titleize %></h1>
 
-<ul>
+<ul id="articles">
   <% @tag.articles.each do |article| %>
     <li>
     	<%= link_to article.title, article_path(article) %>
+      <p>
+    	  <% if article.image.exists? %>
+    	      <%= image_tag article.image.url(:thumb) %><br/>
+    	  <% end %>
+  	  </p>
     </li>
-    <p>
-	  <% if article.image.exists? %>
-	      <%= image_tag article.image.url(:thumb) %><br/>
-	  <% end %>
-	</p>
   <% end %>
 </ul>

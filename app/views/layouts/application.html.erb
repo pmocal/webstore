@@ -12,11 +12,17 @@
 
   <body>
     <p class="flash"><%= flash.notice %></p>
-    <p id="logo">Parthiv's Garment Webstore</p>
+    <div id="top">
+      <img src="https://i.pinimg.com/originals/d6/5b/7f/d65b7f9725b0d0af4d41fb58a34cdcb6.gif" style="height: 200px;">
+      <p id="logo">Parthiv's Garment Webstore</p>
+    </div>
     <div id="container">
       <ul class="navbar">
         <li><a href="/articles">All</a></li>
-        <li><a href="/tags"></a></li>
+        <li><a href="/tags/accessories">Accessories</a></li>
+        <li><a href="/tags/footwear">Footwear</a></li>
+        <li><a href="/tags/outerwear">Outerwear</a></li>
+        <li><a href="/tags/tops">Tops</a></li>
         <li class="login">
           <% if logged_in? %>
             <%= link_to "(logout)", logout_path %>
@@ -24,11 +30,11 @@
             <%= link_to "(login)", login_path %>
           <% end %>
         </li>
-        <li class="login">
-          <% if logged_in? %>
-            <p><%= "Logged in as #{current_user.email}" %></p>
-          <% end %>
-        </li>
+        <% if logged_in? %>
+          <li class="login">
+              <p><%= "Logged in as #{current_user.email}" %></p>
+          </li>
+        <% end %>
       </ul>
       <hr>
       <div id="content">
