@@ -1,22 +1,20 @@
 <h1>All Articles</h1>
 <ul id="articles">
   <% @articles.each do |article| %>
-	<a href="<%= article_path(article) %>">
 		<li>
 			<div class="flex-container">
 				<div>
-					<p><%= article.title %></p>
+					<a href="<%= article_path(article) %>"><p><%= article.title %></p></a>
 				</div>
-				<div>
+				<div class="article-pic">
 					<% if article.image.exists? %>
-					  <%= image_tag article.image.url(:thumb) %><br/>
+					  <a href="<%= article_path(article) %>"><%= image_tag article.image.url(:thumb) %></a><br/>
 					<% end %>
 				</div>
 			</div>
 		</li>
-	</a>
   <% end %>
 </ul>
 <% if logged_in? %>
-	<p> <%= link_to "Create a new article", new_article_path(), class: "new_article" %> </p>
+	<%= link_to "Create a new article", new_article_path(), class: "new_article" %>
 <% end %>
