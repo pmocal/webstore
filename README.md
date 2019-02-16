@@ -12,6 +12,6 @@ The site admin can add items to the webstore. The type of clothing is specified 
 
 Paypal integration should use API response. Item categories should be in dropdown in creation form. Inventory tracking.
 
-**Click on the image below to visit the site.**
 
+**Click on the image below to visit the site.**
 [![screenshot](webstore.png)](https://parthiv-blogger.herokuapp.com/)
