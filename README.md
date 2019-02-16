@@ -1,5 +1,8 @@
 # Webstore
-![![screenshot](webstore.png)](parthiv-webstore.herokuapp.com)
+
+**Click on the image below to visit the site.**
+
+[![screenshot](webstore.png)](https://parthiv-blogger.herokuapp.com/)
 
 ## Summary
 
