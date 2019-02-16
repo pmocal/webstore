@@ -1,5 +1,8 @@
 # Webstore
 
+[![screenshot](webstore.png)](https://parthiv-blogger.herokuapp.com/)
+Click on the image above to visit the site.
+
 ## Summary
 
 A webstore to list clothing for sale.
@@ -12,5 +15,3 @@ The site admin can add items to the webstore. The type of clothing is specified 
 
 Paypal integration should use API response. Item categories should be in dropdown in creation form. Inventory tracking.
 
-[![screenshot](webstore.png)](https://parthiv-blogger.herokuapp.com/)
-**Click on the image above to visit the site.**
