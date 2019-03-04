@@ -1,16 +1,19 @@
 <!-- comment -->
-<h1><%= @tag.name.titleize %></h1>
-
-<ul id="articles">
-  <% @tag.articles.each do |article| %>
-    <a href="<%= article_path(article) %>">
-      <li>
-        <p>
-      	  <% if article.image.exists? %>
-      	      <%= image_tag article.image.url(:thumb) %><br/>
-      	  <% end %>
-    	  </p>
-      </li>
-    </a>
-  <% end %>
-</ul>
+<% if @tag.blank? %>
+  <h1>Create articles with the appropriate tags (one of the categories listed in the tabs) for them to be listed on their corresponding pages.</h1> 
+<% else %>
+  <h1><%= @tag.name.titleize %></h1>
+  <ul id="articles">
+    <% @tag.articles.each do |article| %>
+      <a href="<%= article_path(article) %>">
+        <li>
+          <p>
+            <% if article.image.exists? %>
+                <%= image_tag article.image.url(:thumb) %><br/>
+            <% end %>
+          </p>
+        </li>
+      </a>
+    <% end %>
+  </ul>
+<% end %>

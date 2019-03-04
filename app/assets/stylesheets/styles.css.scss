@@ -105,7 +105,7 @@ body {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 1.7em;
   text-align: center;
 }
 
@@ -151,12 +151,6 @@ h1 {
   padding-right: 3%;
 }
 
-.new_article {
-  position: absolute;
-  bottom: 3em;
-  right: 3em;
-}
-
 #tags a[data-method="delete"] { 
     font-size: 10px;
     width: 50%;
@@ -176,7 +170,7 @@ h1 {
 #backbutton {
   bottom: 10%;
   position: absolute;
-  font-size: 1.6em;
+  font-size: 1.4em;
   margin: 0;
 }
 
